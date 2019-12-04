@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Wardrobe</string>
+    <string name="category">Categories</string>
+    <string name="wardrobe">WARDROBE</string>
+    <string name="shirt_button">Shirts</string>
+    <string name="pants_button">Pants</string>
+    <string name="dress_button">Dresses</string>
+    <string name="add_new_item">Add New Item</string>
+    <string name="jacket_button">Jackets</string>
+
+</resources>
