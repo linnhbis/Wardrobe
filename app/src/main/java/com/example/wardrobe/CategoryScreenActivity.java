@@ -13,7 +13,7 @@ public class CategoryScreenActivity extends AppCompatActivity {
     Button buttonshirt;
     Button buttonjacket;
     Button buttondress;
-    Button buttonnewitem;
+    Button addNewScreenButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,28 +21,70 @@ public class CategoryScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_category_screen);
 
 
-
-        buttonpants  = findViewById(R.id. buttonpants);
-        buttonpants.setOnClickListener(new View.OnClickListener(){
+        buttonpants = findViewById(R.id.buttonpants);
+        buttonpants.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CategoryScreenActivity.this, CategoryScreenActivity.class));
+                Intent pantsIntent = new Intent(CategoryScreenActivity.this, SpecificCategoryActivity.class);
+                pantsIntent.putExtra("category", "pants");
+                startActivity(pantsIntent);
 
             }
 
 
         });
 
-        buttonshirt  = findViewById(R.id. buttonshirt);
-        buttonshirt.setOnClickListener(new View.OnClickListener(){
+        buttonshirt = findViewById(R.id.buttonshirt);
+        buttonshirt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CategoryScreenActivity.this, CategoryScreenActivity.class));
+                Intent shirtIntent = new Intent(CategoryScreenActivity.this, SpecificCategoryActivity.class);
+                shirtIntent.putExtra("category", "shirt");
+                startActivity(shirtIntent);
+            }
+
+
+        });
+
+        buttondress = findViewById(R.id.buttondress);
+        buttondress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dressIntent = new Intent(CategoryScreenActivity.this, SpecificCategoryActivity.class);
+                dressIntent.putExtra("category", "dress");
+                startActivity(dressIntent);
+            }
+
+
+        });
+
+        buttonjacket = findViewById(R.id.buttonjacket);
+        buttonjacket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent jacketIntent = new Intent(CategoryScreenActivity.this, SpecificCategoryActivity.class);
+                jacketIntent.putExtra("category", "jacket");
+                startActivity(jacketIntent);
+            }
+
+
+        });
+
+
+        addNewScreenButton = findViewById(R.id.add_new_button);
+        addNewScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CategoryScreenActivity.this, AddNewItemScreen.class));
+
 
             }
 
 
         });
+
+
     }
-}
 
+
+}
