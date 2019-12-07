@@ -16,7 +16,7 @@ public class CategoryScreenActivity extends AppCompatActivity {
     Button addNewScreenButton;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {  //this contains buttons to all the categorie as well as a add button
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_screen);
 

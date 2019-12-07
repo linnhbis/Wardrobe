@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity { //this is the main menu
 
     Button category_button;
 
@@ -19,13 +19,13 @@ public class MainActivity extends AppCompatActivity {
 
         category_button  =findViewById(R.id. category_button);
         category_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CategoryScreenActivity.class));
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(MainActivity.this, CategoryScreenActivity.class));
 
-            }
-        });
-    }
+        }
+    });
+}
 
 
 

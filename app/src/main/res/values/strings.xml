@@ -10,5 +10,7 @@
     <string name="save_new_item">Save</string>
     <string name="add_new_item_userinput">...</string>
     <string name="add_new_description">Write a description of your clothing item and save it here!</string>
+    <string name="new_outfit_text">Make a new outfit</string>
+    <string name="category_list">List</string>
 
 </resources>
