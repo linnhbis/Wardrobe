@@ -1,6 +1,6 @@
 package com.example.wardrobe;
 
-import android.media.Image;
+
 
 public class Clothes {
 
@@ -8,17 +8,19 @@ public class Clothes {
     private String type;
     private String color;
     private int image_id;
+    private int usedtime;
 
-    public Clothes(String description, String type, String color, int image_id){
+    public Clothes(String description, String type, String color, int image_id) {
         this.color = color;
         this.description = description;
         this.type = type;
         this.image_id = image_id;
+        this.usedtime = 0;
 
 
     }
 
-    public String getDescription(){
+    public String getDescription() {
         return description;
     }
 
@@ -32,5 +34,20 @@ public class Clothes {
 
     public int getImageId() {
         return image_id;
+
     }
+
+    public int getUsedtime(){
+        return usedtime;
+
+    }
+
+
+    public void setUsedtime(int usedtime){
+        this.usedtime=usedtime;
+    }
+
+
+
+
 }
