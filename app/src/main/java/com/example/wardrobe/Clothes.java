@@ -7,13 +7,13 @@ public class Clothes {
     private String description;
     private String type;
     private String color;
-    private Image image;
+    private int image_id;
 
-    public Clothes(String description, String type, String color){
+    public Clothes(String description, String type, String color, int image_id){
         this.color = color;
         this.description = description;
         this.type = type;
-        this.image = null;
+        this.image_id = image_id;
 
 
     }
@@ -30,7 +30,7 @@ public class Clothes {
         return type;
     }
 
-    public Image getImage() {
-        return image;
+    public int getImageId() {
+        return image_id;
     }
 }

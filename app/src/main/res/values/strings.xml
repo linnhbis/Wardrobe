@@ -12,5 +12,26 @@
     <string name="add_new_description">Write a description of your clothing item and save it here!</string>
     <string name="new_outfit_text">Make a new outfit</string>
     <string name="category_list">List</string>
+    <string-array name="category_array">
+        <item>Shirt</item>
+        <item>Pants</item>
+        <item>Dress</item>
+        <item>Jacket</item>
+    </string-array>
+    <string-array name="color_array">
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Purple</item>
+        <item>Pink</item>
+        <item>Black</item>
+        <item>White</item>
+        <item>Brown</item>
+        <item>Grey</item>
+    </string-array>
+    <string name="custom_outfit_category_button">Created Outfits</string>
+
 
 </resources>

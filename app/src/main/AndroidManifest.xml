@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OutfitCreationScreen"></activity>
+        <activity android:name=".OutfitCreationScreen" />
         <activity android:name=".AddNewItemScreen" />
         <activity android:name=".SpecificCategoryActivity" />
         <activity android:name=".CategoryScreenActivity" />

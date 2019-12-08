@@ -8,50 +8,59 @@ android:id="@+id/relative_layout"
     >
 
 
-<ImageView
-    android:id="@+id/icon"
-    android:layout_width="wrap_content"
-    android:layout_height="fill_parent"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentTop="true"
-    android:layout_marginRight="6dip"
-    android:contentDescription="TODO"
-    android:src="@drawable/ic_launcher_background" />
-
-<TextView
-    android:id="@+id/firstLine"
-    android:layout_width="fill_parent"
-    android:layout_height="18dip"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentRight="true"
-    android:layout_toRightOf="@id/icon"
-
-    android:maxLines="1"
-    android:text="Description"
-    android:textSize="12sp" />
-
-<TextView
-    android:id="@+id/secondLine"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_above="@id/firstLine"
-    android:layout_alignParentRight="true"
-
-    android:layout_alignWithParentIfMissing="true"
-    android:layout_toRightOf="@id/icon"
-    android:gravity="center_vertical"
-    android:text="Example application"
-    android:textSize="12sp" />
+    <ImageView
+        android:id="@+id/shirt_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="TODO"
+        android:maxWidth="60dp"
+        android:maxHeight="60dp"
+        android:src="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/thirdLine"
+        android:id="@+id/jacket_line"
+        android:layout_width="fill_parent"
+        android:layout_height="18dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+
+        android:layout_toRightOf="@id/shirt_icon"
+        android:maxLines="1"
+        android:text="Description"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/pants_line"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/secondLine"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
         android:layout_alignWithParentIfMissing="true"
-        android:layout_toRightOf="@id/icon"
+        android:layout_above="@id/jacket_line"
+
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/shirt_icon"
+        android:gravity="center_vertical"
+        android:text="Example application"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/dress_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_above="@id/pants_line"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/shirt_icon"
         android:gravity="center_vertical"
         android:text="Example application"
         android:textSize="12sp" />

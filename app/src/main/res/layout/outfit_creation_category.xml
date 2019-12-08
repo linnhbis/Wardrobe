@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="160dip"
+
+    android:padding="6dip">
+
+
+    <ImageView
+        android:id="@+id/pants_icon"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="false"
+        android:layout_marginTop="5dp"
+
+        android:layout_marginRight="6dip"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/shirt_icon"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_toStartOf="@+id/dress_icon"
+        android:layout_toLeftOf="@+id/dress_icon"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/dress_icon"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="5dp"
+
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_toStartOf="@+id/jacket_icon"
+        android:layout_toLeftOf="@+id/jacket_icon"
+        android:contentDescription="TODO"
+        android:maxWidth="5dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/jacket_icon"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dp"
+
+        android:layout_marginRight="6dip"
+        android:layout_toStartOf="@+id/pants_icon"
+        android:layout_toLeftOf="@+id/pants_icon"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/jacket_line"
+        android:layout_width="fill_parent"
+        android:layout_height="18dip"
+
+        android:layout_above="@+id/pants_line"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toStartOf="@+id/shirt_icon"
+        android:layout_toLeftOf="@+id/shirt_icon"
+        android:maxLines="1"
+        android:text="Description"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/pants_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toStartOf="@+id/shirt_icon"
+        android:layout_toLeftOf="@+id/shirt_icon"
+
+        android:gravity="center_vertical"
+        android:text="Example application"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/shirt_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_above="@+id/dress_line"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toStartOf="@+id/shirt_icon"
+        android:layout_toLeftOf="@+id/shirt_icon"
+
+        android:gravity="center_vertical"
+        android:text="Example application"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/dress_line"
+        android:layout_width="fill_parent"
+        android:layout_height="18dip"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_above="@+id/jacket_line"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toLeftOf="@+id/shirt_icon"
+
+        android:gravity="center_vertical"
+        android:text="Example application"
+        android:textSize="12sp" />
+
+</RelativeLayout>

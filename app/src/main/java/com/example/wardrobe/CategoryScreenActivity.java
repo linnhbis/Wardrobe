@@ -14,6 +14,7 @@ public class CategoryScreenActivity extends AppCompatActivity {
     Button buttonjacket;
     Button buttondress;
     Button addNewScreenButton;
+    Button outfitbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {  //this contains buttons to all the categorie as well as a add button
@@ -26,7 +27,7 @@ public class CategoryScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent pantsIntent = new Intent(CategoryScreenActivity.this, SpecificCategoryActivity.class);
-                pantsIntent.putExtra("category", "pants");
+                pantsIntent.putExtra("category", "Pants");
                 startActivity(pantsIntent);
 
             }
@@ -39,7 +40,7 @@ public class CategoryScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent shirtIntent = new Intent(CategoryScreenActivity.this, SpecificCategoryActivity.class);
-                shirtIntent.putExtra("category", "shirt");
+                shirtIntent.putExtra("category", "Shirt");
                 startActivity(shirtIntent);
             }
 
@@ -51,7 +52,7 @@ public class CategoryScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent dressIntent = new Intent(CategoryScreenActivity.this, SpecificCategoryActivity.class);
-                dressIntent.putExtra("category", "dress");
+                dressIntent.putExtra("category", "Dress");
                 startActivity(dressIntent);
             }
 
@@ -63,7 +64,7 @@ public class CategoryScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent jacketIntent = new Intent(CategoryScreenActivity.this, SpecificCategoryActivity.class);
-                jacketIntent.putExtra("category", "jacket");
+                jacketIntent.putExtra("category", "Jacket");
                 startActivity(jacketIntent);
             }
 
@@ -82,6 +83,33 @@ public class CategoryScreenActivity extends AppCompatActivity {
 
 
         });
+
+        outfitbutton = findViewById(R.id.custom_outfit_category_button);
+        outfitbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent outfitIntent = new Intent(CategoryScreenActivity.this, SpecificCategoryActivity.class);
+                outfitIntent.putExtra("category", "Outfits");
+                startActivity(outfitIntent);
+            }
+
+
+        });
+
+
+        outfitbutton = findViewById(R.id.custom_outfit_category_button);
+        outfitbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent outfitIntent = new Intent(CategoryScreenActivity.this, SpecificCategoryActivity.class);
+                outfitIntent.putExtra("category", "Outfits");
+                startActivity(outfitIntent);
+            }
+
+
+        });
+
+
 
 
     }
