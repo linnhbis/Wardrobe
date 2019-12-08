@@ -32,6 +32,7 @@
         <item>Grey</item>
     </string-array>
     <string name="custom_outfit_category_button">Created Outfits</string>
+    <string name="add_new_outfit_button">Add New Outfit</string>
 
 
 </resources>

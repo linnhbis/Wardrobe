@@ -77,16 +77,33 @@ public class AddNewItemScreen extends AppCompatActivity { //this is where you ad
                     jaysonobject.put("color",spinnerColor.getSelectedItem().toString());
                     jaysonobject.put("type",type.getText().toString());
                     jaysonobject.put("category",spinner.getSelectedItem().toString());
+                    int id = 9;
+                    switch(spinner.getSelectedItem().toString()){
+                        case "Shirt":
+                            id = R.drawable.shirt_stock;
+                            break;
+                        case "Jacket":
+                            id = R.drawable.jacket_stock;
+                            break;
+                        case "Dress":
+                            id = R.drawable.stock_dress;
+                            break;
+                        case "Pants":
+                            id = R.drawable.pants_stock;
+                            break;
+                    }
+                    jaysonobject.put("id",id);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+                Log.d("dcnumerge", "onClick: " + jaysonobject);
 
 
                 editor.putString(encoded, jaysonobject.toString());
                 editor.commit();
                 Log.d("0", "onClick: " + spinner.getSelectedItem().toString());
-               // editor.clear().commit(); //to clear trash
+              //  editor.clear().commit(); //to clear trash
                 finish();
 
 

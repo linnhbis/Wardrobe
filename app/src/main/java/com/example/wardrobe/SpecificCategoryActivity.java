@@ -25,6 +25,25 @@ public class SpecificCategoryActivity extends Activity { //this is where you see
   //this is for all the categories
     String category;
 
+
+    private Clothes getClothesFromJSON(JSONObject json ) throws JSONException{
+
+        String description;
+        String type;
+        String color;
+        int id;
+
+
+        description = json.getString("description");
+        type = json.getString("type");
+        color = json.getString("color");
+        id = json.getInt("id");
+
+        return new Clothes(description, type , color , id );
+    }
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,8 +93,63 @@ public class SpecificCategoryActivity extends Activity { //this is where you see
                    // int id = getResources().getIdentifier("jacket_stock.jpg","drawable",getPackageName());
                     //String src =
                 }
+
+                SharedPreferences sharedPrefOutfits = getSharedPreferences(
+                        "wardrobe_save_outfits", Context.MODE_PRIVATE);
+                Map<String, ?> outfitKeys = sharedPrefOutfits.getAll();
+
+                for (Map.Entry<String, ?> entry : outfitKeys.entrySet()) {
+                    JSONObject outfit = null;
+
+                    try {
+                        outfit = new JSONObject("{\"color\": \"Blue\",\"description\": \"desc\",\"type\":\"hoodie\",\"categ\":\"Shirt\"}");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        outfit = new JSONObject(entry.getValue().toString());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+
+                    ArrayList<Clothes> importedOutfit = new ArrayList<>();
+
+
+
+                        try {
+                            JSONObject json = outfit.getJSONObject("Shirt");
+                            Clothes shirt = getClothesFromJSON(json);
+
+
+
+                            Clothes dress = getClothesFromJSON(outfit.getJSONObject("Dress"));
+
+
+                            Clothes jacket = getClothesFromJSON(outfit.getJSONObject("Jacket"));
+
+
+                            Clothes pants  = getClothesFromJSON(outfit.getJSONObject("Pants"));
+
+
+                            list_wardrobeitems.add(new WardrobeItems(
+                                    shirt, pants, dress, jacket
+                            ));
+
+                        } catch (JSONException e) {
+                            Log.d("reeeeeeeee", "onCreate: asdfg");
+                            e.printStackTrace();
+                        }
+
+                }
+
+
+
+
+
                 final OutfitArrayAdapter outfit_adapter = new OutfitArrayAdapter(this,
                         R.layout.clothing_item_layout, list_wardrobeitems);
+                Log.d("dkjafjdsa", "onCreate: " + list_wardrobeitems.size());
                 listview.setAdapter(outfit_adapter);
 
                 break;
@@ -84,7 +158,7 @@ public class SpecificCategoryActivity extends Activity { //this is where you see
             case "Pants":
             case "Jacket":
 
-                int ImageId = 0;
+                int ImageId = 3;
                 switch(category){
                     case "Shirt":
                         ImageId = R.drawable.shirt_stock;
@@ -136,11 +210,13 @@ public class SpecificCategoryActivity extends Activity { //this is where you see
                     String type = "";
                     String color = "";
                     String categ = "";
+                    int id = 6;
                     try {
                         description = jayson.getString("description");
                         type = jayson.getString("type");
                         color = jayson.getString("color");
                         categ = jayson.getString("category");
+                        id = jayson.getInt("id");
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -153,7 +229,7 @@ public class SpecificCategoryActivity extends Activity { //this is where you see
                                         description.toString(),
                                         type.toString(),
                                         color.toString(),
-                                        ImageId
+                                        id
                                 )
                         );
                     }
@@ -168,23 +244,11 @@ public class SpecificCategoryActivity extends Activity { //this is where you see
                 //TODO: want to make a more specific description screen when user taps specific list item
                 // listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, final View view,
-//                                    int position, long id) {
-//                final String item = (String) parent.getItemAtPosition(position);
-//                view.animate().setDuration(2000).alpha(0)
-//                        .withEndAction(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                list.remove(item);
-//                                adapter.notifyDataSetChanged();
-//                                view.setAlpha(1);
-//                            }
-//                        });
-//            }
 
-                //  });
         }
+
+
+
     }
 
     private class StableArrayAdapter extends ArrayAdapter<Clothes> {

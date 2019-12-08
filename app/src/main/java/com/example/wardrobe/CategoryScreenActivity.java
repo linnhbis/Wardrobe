@@ -15,6 +15,7 @@ public class CategoryScreenActivity extends AppCompatActivity {
     Button buttondress;
     Button addNewScreenButton;
     Button outfitbutton;
+    Button create_outfit_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {  //this contains buttons to all the categorie as well as a add button
@@ -97,13 +98,12 @@ public class CategoryScreenActivity extends AppCompatActivity {
         });
 
 
-        outfitbutton = findViewById(R.id.custom_outfit_category_button);
-        outfitbutton.setOnClickListener(new View.OnClickListener() {
+        create_outfit_button = findViewById(R.id.add_new_outfit_button);
+        create_outfit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent outfitIntent = new Intent(CategoryScreenActivity.this, SpecificCategoryActivity.class);
-                outfitIntent.putExtra("category", "Outfits");
-                startActivity(outfitIntent);
+                startActivity(new Intent(CategoryScreenActivity.this, OutfitCreationScreen.class));
+
             }
 
 

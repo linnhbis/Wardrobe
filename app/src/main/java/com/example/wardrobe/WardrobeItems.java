@@ -29,4 +29,12 @@ public class WardrobeItems {
     public Clothes getPants(){
         return pants;
     }
+
+    public String toString(){
+        return "{\"Shirt\":" + shirt.toString() + ",\"Pants\":" + pants.toString() + ",\"Dress\":" + dress.toString() + ",\"Jacket\":" + jacket.toString() +"}";
+    }
+
+
+
+
 }

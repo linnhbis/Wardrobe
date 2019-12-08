@@ -47,6 +47,10 @@ public class Clothes {
         this.usedtime=usedtime;
     }
 
+    public String toString(){
+        return "{" + "\"description\":\"" + description + "\",\"color\":\"" + color + "\",\"type\":\"" + type  + "\",\"id\":" + image_id +  "}";
+    }
+
 
 
 
